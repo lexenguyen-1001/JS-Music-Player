@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lexe" />
+    <meta name="description" content="This is a Music Player, use Javascript" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- https://design4users.com/neumorphism-mobile-design/ design -->
+  </head>
+  <body>
+    <div id="player" class="music-player">
+      <header class="header">
+        <button class="btn">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
+        <h3 class="header__status">
+          <span class="play">playing now</span>
+          <span class="pause">stopping</span>
+        </h3>
+        <button class="btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </header>
+      <div class="cd">
+        <div
+          class="cd-thumb"
+          style="
+            background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+          "
+        ></div>
+      </div>
+
+      <div class="dashboard">
+        <h3 class="dashboard__name">Loading...</h3>
+        <p class="dashboard__singer">Loading...</p>
+        <div class="dashboard__timer">
+          <input
+            class="progress"
+            type="range"
+            value="0"
+            min="0"
+            max="100"
+            step="1"
+          />
+        </div>
+        <div class="dashboard__control">
+          <button class="dashboard__control__btn btn btn-lg btn__prev">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button class="dashboard__control__btn btn btn-lg btn__play pause">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="dashboard__control__btn btn btn-lg btn__pause play">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button class="dashboard__control__btn btn btn-lg btn__next">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
+      </div>
+
+      <audio id="audio" type="audio/mpeg"></audio>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
